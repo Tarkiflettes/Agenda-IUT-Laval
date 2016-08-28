@@ -17,7 +17,8 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  'styles/**/*.css',
+  'bower_components/semantic/dist/semantic.min.css'
 ];
 
 
@@ -30,6 +31,10 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
+  'bower_components/jquery/dist/jquery.min.js',
+  'bower_components/react/react.min.js',
+  'bower_components/react/react-dom.min.js',
+  'bower_components/semantic/dist/semantic.min.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
