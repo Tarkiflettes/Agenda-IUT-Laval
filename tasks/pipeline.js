@@ -32,10 +32,10 @@ var jsFilesToInject = [
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
   'bower_components/jquery/dist/jquery.min.js',
-  'bower_components/react/react.min.js',
+  'bower_components/react/react-with-addons.min.js',
   'bower_components/react/react-dom.min.js',
   'bower_components/semantic/dist/semantic.min.js',
-
+  'app/**/*.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'

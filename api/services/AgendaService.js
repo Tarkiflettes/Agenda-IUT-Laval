@@ -3,7 +3,10 @@
 module.exports = {
 
   updateDatabase: function() {
-  
+
+    Agenda.destroy().exec(function(err) {
+    });
+
     var database = 
     [
 
@@ -518,11 +521,11 @@ module.exports = {
         { name: 'Examen pratique', identifier: 3065, parent: 3016 },
         { name: 'Examen théorique', identifier: 3067, parent: 3016 }
     ];
-    
+     
     Agenda.create(database).exec(function (err, records) {
       if (err) { console.log(err); }
     });
-
+    
   }
 
 };
