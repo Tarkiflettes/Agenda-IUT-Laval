@@ -1,0 +1,16 @@
+{
+  "name": "Agenda-IUT-Laval",
+  "homepage": "",
+  "description": "",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ]
+}
