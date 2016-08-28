@@ -12,7 +12,7 @@
 ## Liste de tâches
 ###### A faire
 
-###### accomplies
+###### Accomplies
 
 ## Model :
 ![alt tag](http://i.imgur.com/okLfnLp.png)
