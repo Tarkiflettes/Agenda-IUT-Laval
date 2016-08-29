@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="agendaIUTLaval">
   <head>
     <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
 
@@ -8,7 +8,7 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
-    <link rel="stylesheet" href="/bower_components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
     <!--STYLES END-->
   </head>
 
@@ -18,13 +18,15 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/react/react-with-addons.min.js"></script>
-    <script src="/bower_components/react/react-dom.min.js"></script>
-    <script src="/bower_components/semantic/dist/semantic.min.js"></script>
-    <script src="/app/App.js"></script>
-    <script src="/app/header.js"></script>
-    <script src="/app/routes.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/app/common/headerController.js"></script>
+    <script src="/app/listAgendas/listAgendasController.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
