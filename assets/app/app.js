@@ -11,7 +11,7 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
     .state('root', {
       views: {
         'header': {
-          template: 'app/common/headerView.html',
+          templateUrl: 'app/common/headerView.html',
           controller: 'HeaderController',
           controllerAs: 'header'
         },
@@ -25,6 +25,12 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
     templateUrl: 'app/listAgendas/listAgendasView.html',
     controller: 'ListAgendasController',
     controllerAs: 'la',
+  })
+  .state('root.agenda', {
+    url: '/:id',
+    templateUrl: 'app/agenda/agendaView.html',
+    controller: 'agendaController',
+    controllerAs: 'agenda',
   });
 
 });
