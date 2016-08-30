@@ -29,9 +29,9 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
   .state('root.agenda', {
     url: '/:id',
     templateUrl: 'app/agenda/agendaView.html',
-    controller: 'agendaController',
+    controller: 'AgendaController',
     controllerAs: 'agenda',
   });
 
-});
+})
 

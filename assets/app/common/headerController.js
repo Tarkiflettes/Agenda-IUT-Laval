@@ -2,4 +2,4 @@ var HeaderController = agendaIUTLaval.controller("HeaderController", function($s
   
   var vm = this;
 
-})
+});

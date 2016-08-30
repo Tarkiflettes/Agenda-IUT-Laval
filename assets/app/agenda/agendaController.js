@@ -1,4 +1,4 @@
-var agendaController = agendaIUTLaval.controller("agendaController", function($scope) {
+var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope) {
   
   var vm = this;
 
