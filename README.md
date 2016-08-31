@@ -2,12 +2,14 @@
 
 ## Librairie utilisées
 ###### Front
-- jquery
-- react
-- semantic
+- angular
+- angular-ui-router
+- angular-material
+- angular-ui-calendar
 
 ###### Back
 - sails
+- ical
 
 ## Liste de tâches
 ###### A faire

@@ -1,4 +1,4 @@
-var agendaIUTLaval = angular.module("agendaIUTLaval", ['ui.router']);
+var agendaIUTLaval = angular.module("agendaIUTLaval", ['ui.router', 'ui.calendar', 'ngAnimate']);
 
 agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
 
