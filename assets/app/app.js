@@ -1,4 +1,4 @@
-var agendaIUTLaval = angular.module("agendaIUTLaval", ['ui.router', 'ui.calendar', 'ngAnimate']);
+var agendaIUTLaval = angular.module("agendaIUTLaval", ['ui.router', 'ui.calendar', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
 
 agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
 
@@ -10,6 +10,11 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
   $stateProvider
     .state('root', {
       views: {
+        'sidenav': {
+          templateUrl: 'app/common/sidenavView.html',
+          controller: 'SidenavController',
+          controllerAs: 'sidenav'
+        },
         'header': {
           templateUrl: 'app/common/headerView.html',
           controller: 'HeaderController',

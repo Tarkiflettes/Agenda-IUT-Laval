@@ -19,7 +19,8 @@
 var cssFilesToInject = [
   'styles/**/*.css',
   'bower_components/angular-material/angular-material.min.css',
-  'bower_components/fullcalendar/dist/fullcalendar.css'
+  'bower_components/fullcalendar/dist/fullcalendar.css',
+  'bower_components/font-awesome/css/font-awesome.min.css'
 ];
 
 
@@ -41,10 +42,12 @@ var jsFilesToInject = [
   'bower_components/angular-aria/angular-aria.min.js',
   'bower_components/angular-messages/angular-messages.min.js',
   'bower_components/angular-material/angular-material.min.js',
-  
+  'bower_components/angular-material-icons/angular-material-icons.min.js',
+ 
   'bower_components/angular-ui-calendar/src/calendar.js',
   'bower_components/fullcalendar/dist/fullcalendar.min.js',
   'bower_components/fullcalendar/dist/gcal.js',
+  'bower_components/fullcalendar/dist/lang-all.js',
 
   'app/*.js',
   'app/**/*.js',

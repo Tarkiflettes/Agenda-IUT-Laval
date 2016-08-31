@@ -21,6 +21,8 @@
     "grunt-sync": "0.5.2",
     "ical": "^0.5.0",
     "include-all": "~0.1.6",
+    "moment": "^2.14.1",
+    "moment-timezone": "^0.5.5",
     "rc": "1.0.1",
     "sails": "~0.12.4",
     "sails-disk": "~0.10.9"
