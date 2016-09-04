@@ -16,10 +16,10 @@
     <!--STYLES END-->
   </head>
 
-  <body>
+  <body ng-controller="MainController as main" layout="column" layout-fill ng-cloak>
+    <section layout="row" flex> 
     <%- body %>
-
-
+    </section>   
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
@@ -38,6 +38,7 @@
     <script src="/app/app.js"></script>
     <script src="/app/agenda/agendaController.js"></script>
     <script src="/app/common/headerController.js"></script>
+    <script src="/app/common/mainController.js"></script>
     <script src="/app/common/sidenavController.js"></script>
     <script src="/app/listAgendas/listAgendasController.js"></script>
     <!--SCRIPTS END-->

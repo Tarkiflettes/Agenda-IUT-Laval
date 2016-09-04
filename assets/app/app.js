@@ -38,5 +38,5 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
     controllerAs: 'agenda',
   });
 
-})
+});
 
