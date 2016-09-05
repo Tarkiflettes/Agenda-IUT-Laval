@@ -1,4 +1,13 @@
-var agendaIUTLaval = angular.module("agendaIUTLaval", ['ui.router', 'ui.calendar', 'ngAnimate', 'ngMaterial', 'ngMdIcons']);
+var agendaIUTLaval = angular.module("agendaIUTLaval", 
+    [
+    'ui.router', 
+    'ui.calendar', 
+    'ngAnimate', 
+    'ngMaterial', 
+    'ngMdIcons',
+    'sasrio.angular-material-sidenav'
+    ]
+);
 
 agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
 
