@@ -1,7 +1,20 @@
 <div ng-controller="SidenavController as sidenav">
 
-<md-sidenav md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" class="md-sidenav-left">
-  Welcome to TutorialsPoint.Com
-</md-sidenav>
+<!--
+  <ss-sidenav menu="menu"></ss-sidenav>
+-->
+
+<script type="text/ng-template" id="field_renderer.html">
+
+</script>
+
+<md-sidemenu>
+  <md-sidemenu-group ng-repeat="menu in sidenav.events">
+  
+    <md-sidemenu-content href="?a=0" md-heading="{{ menu.name }}" md-arrow="true">
+    </md-sidemenu-content>
+
+  </md-sidemenu-group>
+</md-sidemenu
 
 </div>

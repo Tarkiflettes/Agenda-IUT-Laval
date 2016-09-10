@@ -2,14 +2,24 @@ var agendaIUTLaval = angular.module("agendaIUTLaval",
     [
     'ui.router', 
     'ui.calendar', 
-    'ngAnimate', 
-    'ngMaterial', 
+    'ngAnimate',
+    'ngAria',
+    'ngMessages',
+    'ngMaterial',
     'ngMdIcons',
-    'sasrio.angular-material-sidenav'
+    'ngMaterialSidemenu'
     ]
-);
+    );
 
-agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
+agendaIUTLaval.config(
+    function(
+      $stateProvider, 
+      $urlRouterProvider, 
+      $locationProvider, 
+      $urlMatcherFactoryProvider, 
+      $mdThemingProvider,
+      $mdIconProvider
+      ) {
 
   $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
@@ -46,6 +56,6 @@ agendaIUTLaval.config(function($stateProvider, $urlRouterProvider, $locationProv
     controller: 'AgendaController',
     controllerAs: 'agenda',
   });
-
+ 
 });
 

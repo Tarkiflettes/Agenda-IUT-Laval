@@ -20,6 +20,6 @@
     "angular-ui-calendar": "^1.0.2",
     "font-awesome": "font-awsome#^4.6.3",
     "angular-material-icons": "^0.7.1",
-    "angular-material-sidenav": "^0.0.14"
+    "angular-material-sidemenu": "^1.0.1"
   }
 }
