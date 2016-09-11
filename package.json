@@ -30,7 +30,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install -–force-latest"
   },
   "main": "app.js",
   "repository": {
