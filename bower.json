@@ -21,5 +21,8 @@
     "font-awesome": "font-awsome#^4.6.3",
     "angular-material-icons": "^0.7.1",
     "angular-material-sidemenu": "^1.0.1"
+  },
+  "resolutions": {
+    "angular": "^1.5.8"
   }
 }
