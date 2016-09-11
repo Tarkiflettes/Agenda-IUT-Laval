@@ -1,12 +1,3 @@
-<!--
-<div ui-view="sidenav"></div>
-
-<md-content flex>
-  <div ui-view="header"></div>
-  <div ui-view="content"></div>
-</md-content>
--->
-
 <md-sidenav class="md-sidenav-left md-whiteframe-z2"
   md-component-id="left"
   md-is-locked-open="$mdMedia('gt-sm')">
@@ -18,6 +9,6 @@
 </md-sidenav>
 
 <div flex>
-  <div ui-view="header"></div>
+  <div ui-view="header" id="header"></div>
   <div ui-view="content"></div>
 </div>

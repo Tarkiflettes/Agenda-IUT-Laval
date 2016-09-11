@@ -1,20 +1,38 @@
 <div ng-controller="SidenavController as sidenav">
 
-<!--
-  <ss-sidenav menu="menu"></ss-sidenav>
--->
-
-<script type="text/ng-template" id="field_renderer.html">
-
-</script>
-
 <md-sidemenu>
-  <md-sidemenu-group ng-repeat="menu in sidenav.events">
-  
-    <md-sidemenu-content href="?a=0" md-heading="{{ menu.name }}" md-arrow="true">
+
+  <md-sidemenu-group>
+    
+    <md-subheader class="md-no-sticky">Etudiants</md-subheader>
+    <md-sidemenu-content md-heading="DUT INFO 1" md-arrow="true">
+      <md-sidemenu-button ui-sref="root.agenda({id: 2660})">11A</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 2661})">11B</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 1149})">12C</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 1150})">12D</md-sidemenu-button>
+    </md-sidemenu-content>
+    <md-sidemenu-content md-heading="DUT INFO 2" md-arrow="true">
+      <md-sidemenu-button ui-sref="root.agenda({id: 2667})">21A</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 2668})">21B</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 3113})">22C</md-sidemenu-button>
+      <md-sidemenu-button ui-sref="root.agenda({id: 3115})">22D</md-sidemenu-button>
+    </md-sidemenu-content>
+
+    <md-subheader class="md-no-sticky">Enseignants</md-subheader>
+    <md-sidemenu-content md-heading="Titulaires" md-arrow="true">
+    </md-sidemenu-content>
+    <md-sidemenu-content md-heading="Vacataires" md-arrow="true">
+    </md-sidemenu-content>   
+    
+    <md-subheader class="md-no-sticky">Salles</md-subheader>
+    <md-sidemenu-content md-heading="TD" md-arrow="true">
+    </md-sidemenu-content>
+    <md-sidemenu-content md-heading="TDm" md-arrow="true">
+    </md-sidemenu-content>
+    <md-sidemenu-content md-heading="TP" md-arrow="true">
     </md-sidemenu-content>
 
   </md-sidemenu-group>
-</md-sidemenu
+</md-sidemenu>
 
 </div>

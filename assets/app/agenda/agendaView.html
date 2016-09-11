@@ -1,3 +1,20 @@
 <div ng-controller="AgendaController as agenda">
-  <div ui-calendar="uiConfig.calendar" ng-model="eventSources">
+  <md-toolbar id="control" layout="row" layout-align="space-between center">
+    <md-button class="md-icon-button" ng-click="changeView('month')" aria-label="Mois">
+      <md-icon>view_module</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="changeView('agendaWeek')" aria-label="Semaine">
+      <md-icon>view_week</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="changeView('agendaDay')" aria-label="Jour">
+      <md-icon>view_day</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="prev()" aria-label="Semaine précédente">
+      <md-icon>keyboard_arrow_left</md-icon>
+    </md-button>
+    <md-button class="md-icon-button" ng-click="next()" aria-label="Semaine suivante">
+      <md-icon>keyboard_arrow_right</md-icon>
+    </md-button>
+  </md-toolbar>
+  <div ui-calendar="uiConfig.calendar" ng-model="eventSources"  calendar="myCalendar"></div>
 </div>

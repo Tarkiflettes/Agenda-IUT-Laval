@@ -50,12 +50,21 @@ agendaIUTLaval.config(
     controller: 'ListAgendasController',
     controllerAs: 'la',
   })
+  .state('root.about', {
+    url: '/a',
+    templateUrl: 'app/about/aboutView.html'
+  })
   .state('root.agenda', {
     url: '/:id',
     templateUrl: 'app/agenda/agendaView.html',
     controller: 'AgendaController',
     controllerAs: 'agenda',
   });
- 
+
+  
+  $mdThemingProvider.theme('IUT')
+    .primaryPalette('teal')
+    .accentPalette('green');
+
 });
 

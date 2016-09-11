@@ -2,6 +2,7 @@
 
 <md-toolbar ng-show="!showSearch">
 <div class="md-toolbar-tools">
+ 
   <md-button class="md-icon-button" ng-click="openLeftMenu()" hide-gt-md aria-label="Menu">
     <ng-md-icon icon="menu"></ng-md-icon>
   </md-button>
@@ -12,14 +13,34 @@
   <md-button class="md-icon-button" aria-label="Search" ng-click="showSearch = !showSearch" style="display:none">
     <ng-md-icon icon="search"></ng-md-icon>
   </md-button>
-  <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
-    <ng-md-icon icon="more_vert"></ng-md-icon>
-  </md-button>
+
+  <md-menu>
+    <md-button class="md-icon-button" aria-label="Open Settings" ng-click="header.openMenu($mdOpenMenu, $event)">
+      <ng-md-icon icon="more_vert"></ng-md-icon>
+    </md-button>
+
+    <md-menu-content width="4">
+      <md-menu-item>
+        <md-button href="https://github.com/Tarkiflettes/Agenda-IUT-Laval">
+          <md-icon md-font-icon="fa-github" class="fa s64 fa-1x"></md-icon>
+          Github
+        </md-button>
+      </md-menu-item>
+      <md-menu-item>
+        <md-button ui-sref="root.about">
+          <md-icon md-font-icon="fa-question-circle" class="fa s64 fa-1x"></md-icon>
+          À propos
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
 </div>
 </md-toolbar>
 
+
 <md-toolbar class="md-hue-1" ng-show="showSearch">
 <div class="md-toolbar-tools">
+
   <md-button class="md-icon-button" ng-click="showSearch = !showSearch" aria-label="Back">
     <ng-md-icon icon="arrow_back"></ng-md-icon>
   </md-button>
@@ -33,6 +54,7 @@
   <md-button class="md-icon-button" aria-label="Open Settings" ng-click="showListBottomSheet($event)">
     <ng-md-icon icon="more_vert"></ng-md-icon>
   </md-button>
+
 </div>
 </md-toolbar>
 
