@@ -1,7 +1,7 @@
 {
   "name": "Agenda-IUT-Laval",
   "private": true,
-  "version": "0.0.0",
+  "version": "6.4.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
