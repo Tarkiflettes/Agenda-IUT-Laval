@@ -18,7 +18,7 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'someMysqlServer'
+    connection: 'someMongodbServer'
   },
 
   /***************************************************************************
@@ -33,6 +33,8 @@ module.exports = {
 
   log: {
     level: "debug"
-  }
+  },
+
+  hookTimeout: 40000
 
 };
