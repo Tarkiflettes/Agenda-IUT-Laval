@@ -8,6 +8,7 @@
 - angular-ui-calendar
 - font-awesome
 - angular-material-icons
+- angular-material-sidemenu
 
 ###### Back
 - sails
@@ -17,17 +18,19 @@
 
 ## Liste de tâches
 ###### A faire
-- Header
-- Sidenav (avec menu des agendas)
+- Page d'accueil
+- Sidenav à ameliorer
 - Couleurs des events
 - Barre de recherche
-- Styling de angular-ui-calendar (height)
-- Styling des boutons de angular-ui-calendar
 
 ###### Accomplies
+- Header
+- Sidenav (avec menu des agendas)
 - API des events
 - API des agendas
 - integration angular-ui-calendar
+- Styling de angular-ui-calendar (height)
+- Styling des boutons de angular-ui-calendar
 
 ## Model :
 ![alt tag](http://i.imgur.com/okLfnLp.png)
