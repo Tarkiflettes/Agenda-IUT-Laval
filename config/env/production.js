@@ -35,10 +35,6 @@ module.exports = {
     level: "debug"
   },
 
-<<<<<<< HEAD
-  hookTimeout: 40000
-=======
   hookTimeout: 100000
->>>>>>> dev_LJ
 
 };
