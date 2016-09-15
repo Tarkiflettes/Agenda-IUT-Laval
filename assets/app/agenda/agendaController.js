@@ -3,7 +3,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   var vm = this;
 
   $scope.eventSource = {
-    url: "http://192.168.1.132:1337/api/agenda/icalToJson?id="+$stateParams.id,
+    url: "/api/agenda/icalToJson?id="+$stateParams.id,
     className: 'gcal-event',           // an option!
   };
 
