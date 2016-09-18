@@ -24,7 +24,11 @@ module.exports = {
     var output = [];
 
     sails.ical.fromURL(url, {}, function(err, data) {
+      
       var i = 0;
+      
+      AgendaService.eventColor("lapin");
+
       for (var k in data){
         if (data.hasOwnProperty(k)) {
           var ev = data[k];
@@ -37,12 +41,15 @@ module.exports = {
           var end = sails.moment(ev.end);
           end = end.tz('Europe/Paris').format();
 
+          var description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
+
           eventJ = {
-            title: ev.summary+'\n'+ev.location,
+            title: ev.summary+'\n'+ev.location+'\n'+description,
             location: ev.location,
             start: start,
             end: end,
             color: '#2980b9',
+            //color: '#'+AgendaService.eventColor(ev.summary),
             url: '/e/'+i
           };
           

@@ -52,7 +52,9 @@ agendaIUTLaval.config(
   })
   .state('root.about', {
     url: '/a',
-    templateUrl: 'app/about/aboutView.html'
+    templateUrl: 'app/about/aboutView.html',
+    controller: 'AboutController',
+    controllerAs: 'about'
   })
   .state('root.agenda', {
     url: '/:id',

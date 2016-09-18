@@ -1,6 +1,9 @@
-var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig) {
+var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig, $rootScope) {
 
   var vm = this;
+ 
+  $rootScope.title = "Agenda - IUT Laval";
+  $rootScope.subTitle = "Agenda - IUT Laval";
 
   $scope.eventSource = {
     url: "/api/agenda/icalToJson?id="+$stateParams.id,
@@ -22,7 +25,9 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
       defaultView: 'agendaWeek',
       header: false,
       weekends: false,
-      scrollTime :  "08:00:00", 
+      scrollTime:  "08:00:00",
+      minTime: "07:00:00",
+      maxTime: "21:00:00",
       eventClick: $scope.alertEventOnClick,
       eventDrop: $scope.alertOnDrop,
       eventResize: $scope.alertOnResize

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="agendaIUTLaval">
   <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+    <title ng-bind="title"></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,12 +9,12 @@
     <base href="/">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.css">
-    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/bower_components/angular-material-icons/angular-material-icons.css">
     <link rel="stylesheet" href="/bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css">
     <!--STYLES END-->
@@ -41,6 +41,7 @@
     <script src="/bower_components/fullcalendar/dist/gcal.js"></script>
     <script src="/bower_components/fullcalendar/dist/lang-all.js"></script>
     <script src="/app/app.js"></script>
+    <script src="/app/about/aboutController.js"></script>
     <script src="/app/agenda/agendaController.js"></script>
     <script src="/app/common/headerController.js"></script>
     <script src="/app/common/mainController.js"></script>

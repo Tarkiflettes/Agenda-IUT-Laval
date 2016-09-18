@@ -526,6 +526,24 @@ module.exports = {
       if (err) { console.log(err); }
     });
     
+  },
+  
+  eventColor: function(text) {
+    //text = text.split("").reverse().join("");
+    text = text.replace(/(M[0-9]+ - (?:TDm?|TP) - )/g, "");
+    text = text.replace(/ /g,'');
+    return parseInt(AgendaService.textToBinary(text), 2).toString(16);
+  },
+
+  textToBinary: function(input) {
+    if (input.length<3) {
+      input = "aaa";
+    }
+    var output = "";
+    for (i=0; i < 3; i++) {
+      output += input[i].charCodeAt(0).toString(2) + "";
+    }
+    return output;
   }
 
 };

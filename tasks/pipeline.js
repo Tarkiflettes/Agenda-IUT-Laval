@@ -20,7 +20,6 @@ var cssFilesToInject = [
   'styles/**/*.css',
   'bower_components/angular-material/angular-material.min.css',
   'bower_components/fullcalendar/dist/fullcalendar.css',
-  'bower_components/font-awesome/css/font-awesome.min.css',
   'bower_components/angular-material-icons/angular-material-icons.css',
   'bower_components/angular-material-sidemenu/dest/angular-material-sidemenu.css'
 ];
