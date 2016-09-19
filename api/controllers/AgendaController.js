@@ -50,7 +50,7 @@ module.exports = {
             end: end,
             color: '#2980b9',
             //color: '#'+AgendaService.eventColor(ev.summary),
-            url: '/e/'+i
+            url: '/e/'+id+"/"+i
           };
           
           output.push(eventJ);

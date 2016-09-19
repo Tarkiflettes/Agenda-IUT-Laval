@@ -61,7 +61,14 @@ agendaIUTLaval.config(
     templateUrl: 'app/agenda/agendaView.html',
     controller: 'AgendaController',
     controllerAs: 'agenda',
-  });
+  }).
+  state('root.course', {
+    url: '/e/:id/:course',
+    templateUrl: 'app/course/courseView.html',
+    controller: 'CourseController',
+    controllerAs: 'course'
+  })
+  ;
 
   
   $mdThemingProvider.theme('IUT')
