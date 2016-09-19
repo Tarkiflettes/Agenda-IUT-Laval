@@ -19,48 +19,51 @@ module.exports = {
 
     var id = req.param('id');
 
-    var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=2&calType=ical&nbWeeks=4';
+    if (typeof id == 'undefined') {
+      res.badRequest("id non defini");
+    } else {
+      var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=2&calType=ical&nbWeeks=4';
 
-    var output = [];
+      var output = [];
 
-    sails.ical.fromURL(url, {}, function(err, data) {
-      
-      var i = 0;
-      
-      AgendaService.eventColor("lapin");
+      sails.ical.fromURL(url, {}, function(err, data) {
+        
+        var i = 0;
+        
+        AgendaService.eventColor("lapin");
 
-      for (var k in data){
-        if (data.hasOwnProperty(k)) {
-          var ev = data[k];
-          
-          //console.log(ev);
-                   
-          var start = sails.moment(ev.start);
-          start = start.tz('Europe/Paris').format();
-          
-          var end = sails.moment(ev.end);
-          end = end.tz('Europe/Paris').format();
+        for (var k in data){
+          if (data.hasOwnProperty(k)) {
+            var ev = data[k];
+            
+            //console.log(ev);
+                     
+            var start = sails.moment(ev.start);
+            start = start.tz('Europe/Paris').format();
+            
+            var end = sails.moment(ev.end);
+            end = end.tz('Europe/Paris').format();
 
-          var description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
+            var description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
 
-          eventJ = {
-            title: ev.summary+'\n'+ev.location+'\n'+description,
-            location: ev.location,
-            start: start,
-            end: end,
-            color: '#2980b9',
-            //color: '#'+AgendaService.eventColor(ev.summary),
-            url: '/e/'+id+"/"+i
-          };
-          
-          output.push(eventJ);
-          
-          i++;
+            eventJ = {
+              title: ev.summary+'\n'+ev.location+'\n'+description,
+              location: ev.location,
+              start: start,
+              end: end,
+              color: '#2980b9',
+              //color: '#'+AgendaService.eventColor(ev.summary),
+              url: '/e/'+id+"/"+i
+            };
+            
+            output.push(eventJ);
+            
+            i++;
+          }
         }
-      }
-      res.send(output);
-    });
-
+        res.json(output);
+      });
+    }
   }
 
 };
