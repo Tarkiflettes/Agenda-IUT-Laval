@@ -529,18 +529,23 @@ module.exports = {
   },
   
   eventColor: function(text) {
-    //text = text.split("").reverse().join("");
-    text = text.replace(/(M[0-9]+ - (?:TDm?|TP) - )/g, "");
-    text = text.replace(/ /g,'');
-    return parseInt(AgendaService.textToBinary(text), 2).toString(16);
+    var colors = [
+      "#1abc9c",
+      "#2ecc71",
+      "#3498db",
+      "#9b59b6",
+      "#f39c12",
+      "#e67e22",
+      "#e74c3c",
+      "#7f8c8d",
+    ];
+    var idColor = (AgendaService.textToBinary(text).split("1").length - 1);
+    return colors[(idColor%8)];
   },
 
   textToBinary: function(input) {
-    if (input.length<3) {
-      input = "aaa";
-    }
     var output = "";
-    for (i=0; i < 3; i++) {
+    for (i=0; i < input.length; i++) {
       output += input[i].charCodeAt(0).toString(2) + "";
     }
     return output;

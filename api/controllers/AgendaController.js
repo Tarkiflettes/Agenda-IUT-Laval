@@ -51,8 +51,8 @@ module.exports = {
               location: ev.location,
               start: start,
               end: end,
-              color: '#2980b9',
-                //color: '#'+AgendaService.eventColor(ev.summary),
+              //color: '#2980b9',
+              color: AgendaService.eventColor(ev.summary),
               url: '/e/'+id+"/"+i
             };
 
