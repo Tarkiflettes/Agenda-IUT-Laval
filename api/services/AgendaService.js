@@ -530,17 +530,23 @@ module.exports = {
   
   eventColor: function(text) {
     var colors = [
-      "#1abc9c",
-      "#2ecc71",
-      "#3498db",
-      "#9b59b6",
-      "#f39c12",
-      "#e67e22",
-      "#e74c3c",
-      "#7f8c8d",
+      "#EF5350", "#B71C1C", 
+      "#F06292", "#880E4F",
+      "#AB47BC", "#4A148C",
+      "#9575CD", "#311B92",
+      "#7986CB", "#1A237E",
+      "#2196F3", "#0D47A1",
+      "#039BE5", "#01579B",
+      "#0097A7", "#006064",
+      "#009688", "#004D40",
+      "#43A047", "#1B5E20",
+      "#689F38", "#33691E",
+      "#FF5722", "#BF360C",
+      "#8D6E63", "#3E2723",
+      "#78909C", "#455A64"
     ];
     var idColor = (AgendaService.textToBinary(text).split("1").length - 1);
-    return colors[(idColor%8)];
+    return colors[(idColor%28)];
   },
 
   textToBinary: function(input) {
