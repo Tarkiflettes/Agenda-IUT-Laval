@@ -63,7 +63,7 @@ agendaIUTLaval.config(
     controllerAs: 'agenda',
   }).
   state('root.course', {
-    url: '/e/:id/:course',
+    url: '/:id/:course',
     templateUrl: 'app/course/courseView.html',
     controller: 'CourseController',
     controllerAs: 'course'

@@ -1,2 +1,16 @@
 <div ng-controller="CourseController as course">
+
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline" ng-bind="course.course.title">Action buttons</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p ng-bind="course.course.description"></p>
+    <p><b>Salle : </b><span ng-bind="course.course.location"></span></p>
+    <p><b>Début : </b><span ng-bind="course.course.start | date:'HH:mm - dd/MM/yyyy'"></span></p>
+    <p><b>Fin : </b><span ng-bind="course.course.end | date:'HH:mm - dd/MM/yyyy'"></span></p>
+  </md-card-content>
+</md-card>
 </div>
