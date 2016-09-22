@@ -1,4 +1,4 @@
-var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig, $rootScope) {
+var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig, $rootScope, $state) {
 
   var vm = this;
  
@@ -11,6 +11,13 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   };
 
   $scope.eventSources = $scope.eventSource;
+  
+  if (typeof $stateParams.view !== "undefined") {
+    dafaultView = $stateParams.view; 
+  } else {
+    dafaultView = 'agendaView';
+  }
+
 
   $scope.uiConfig = {
     calendar:{
@@ -22,7 +29,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
       editable: false,
       lang: 'fr',
       allDaySlot: false,
-      defaultView: 'agendaWeek',
+      defaultView: defaultView,
       header: false,
       weekends: false,
       scrollTime:  "08:00:00",
@@ -55,6 +62,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   }
 
   $scope.changeView = function(viewName) {
+    $state.go('root.agenda', {id: 3113, view: viewName});
     uiCalendarConfig.calendars.myCalendar.fullCalendar('changeView', viewName); 
   }
 

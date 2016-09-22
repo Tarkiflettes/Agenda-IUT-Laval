@@ -57,7 +57,7 @@ agendaIUTLaval.config(
     controllerAs: 'about'
   })
   .state('root.agenda', {
-    url: '/:id',
+    url: '/:id?view&i',
     templateUrl: 'app/agenda/agendaView.html',
     controller: 'AgendaController',
     controllerAs: 'agenda',
