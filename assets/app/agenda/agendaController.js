@@ -11,13 +11,12 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   };
 
   $scope.eventSources = $scope.eventSource;
-  
-  if (typeof $stateParams.view !== "undefined") {
-    dafaultView = $stateParams.view; 
-  } else {
-    dafaultView = 'agendaView';
-  }
+ 
+  var defaultView = 'agendaView';
 
+  if (typeof $stateParams.view !== "undefined") {
+    defaultView = $stateParams.view; 
+  }
 
   $scope.uiConfig = {
     calendar:{
