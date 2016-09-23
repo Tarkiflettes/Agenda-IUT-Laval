@@ -20,8 +20,11 @@
 ###### A faire
 - Page d'accueil
 - Sidenav à ameliorer
-- Couleurs des events
 - Barre de recherche
+- Swipe sidenav
+- Swipe agenda
+- url agenda date
+- bdd menu
 
 ###### Accomplies
 - Header
@@ -31,6 +34,9 @@
 - integration angular-ui-calendar
 - Styling de angular-ui-calendar (height)
 - Styling des boutons de angular-ui-calendar
+- Couleurs des events
+- url eganda view
+- Page des events
 
 ## Model :
 ![alt tag](http://i.imgur.com/okLfnLp.png)

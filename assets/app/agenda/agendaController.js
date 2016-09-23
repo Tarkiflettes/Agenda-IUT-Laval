@@ -12,7 +12,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
 
   $scope.eventSources = $scope.eventSource;
  
-  var defaultView = 'agendaView';
+  var defaultView = 'agendaWeek';
 
   if (typeof $stateParams.view !== "undefined") {
     defaultView = $stateParams.view; 
