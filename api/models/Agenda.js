@@ -21,6 +21,11 @@ module.exports = {
       primaryKey: true,
       unique: true
     },
+    
+    type: {
+      type: 'integer',
+      required: true
+    },
 
     children: {
       collection: 'agenda',

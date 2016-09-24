@@ -1,5 +1,8 @@
 <div ng-controller="AgendaController as agenda">
   <md-toolbar id="control" layout="row" layout-align="space-between center">
+    <md-button class="md-icon-button" ng-click="today()" aria-label="Mois">
+      <md-icon>access_time</md-icon>
+    </md-button>
     <md-button class="md-icon-button" ng-click="changeView('month')" aria-label="Mois">
       <md-icon>view_module</md-icon>
     </md-button>

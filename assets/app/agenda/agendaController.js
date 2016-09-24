@@ -65,4 +65,8 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
     uiCalendarConfig.calendars.myCalendar.fullCalendar('changeView', viewName); 
   }
 
+  $scope.today = function() {
+    uiCalendarConfig.calendars.myCalendar.fullCalendar('today');
+  }
+
 })
