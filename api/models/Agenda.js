@@ -28,7 +28,7 @@ module.exports = {
     },
 
     department: {
-      model: 'agenda'
+      type: 'integer'
     },
 
     children: {
