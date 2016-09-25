@@ -27,6 +27,10 @@ module.exports = {
       required: true
     },
 
+    department: {
+      model: 'agenda'
+    },
+
     children: {
       collection: 'agenda',
       via: 'parent'

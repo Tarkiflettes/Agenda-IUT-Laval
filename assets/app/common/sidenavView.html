@@ -2,6 +2,20 @@
 
 <md-sidemenu>
 
+  <md-sidemenu-group ng-repeat="dp in sidenav.department" ng-show="dep">
+    <md-sidemenu-button ng-click="changeMenu()">{{ dp.name }}</md-sidemenu-button>
+  </md-sidemenu-group>
+
+  <md-sidemenu-group ng-show="grade">
+    <md-sidemenu-button ng-click="changeMenu()">Liste départements</md-sidemenu-button>
+  </md-sidemenu-group>
+  <!--
+  <md-sidemenu-group>
+    <md-sidemenu-button ng-hide="efg" ng-click="abc = !abc">krtyrty</md-sidemenu-button>
+    <md-sidemenu-button ng-show="abc" ng-click="efg = !efg">anc</md-sidemenu-button>
+  </md-sidemenu-group>
+  -->
+  <!--
   <md-sidemenu-group>
     
     <md-subheader class="md-no-sticky">Etudiants</md-subheader>
@@ -33,6 +47,7 @@
     </md-sidemenu-content>
 
   </md-sidemenu-group>
+-->
 </md-sidemenu>
 
 </div>
