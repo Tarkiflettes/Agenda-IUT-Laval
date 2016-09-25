@@ -25,7 +25,7 @@ var SidenavController = agendaIUTLaval.controller("SidenavController", function(
     $scope.dep = !$scope.dep;
     $scope.grade = !$scope.grade;
     if($scope.grade) {
-      $http.get("/api/agenda?type=1&type=2", {params: {"department": id, "limit": 1000}})
+      $http.get("/api/agenda", {params: {"level": 2, "department": id, "limit": 1000}})
         .success(function(data){
 
           vm.grade = data;

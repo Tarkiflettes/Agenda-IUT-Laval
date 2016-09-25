@@ -31,6 +31,11 @@ module.exports = {
       type: 'integer'
     },
 
+    level: {
+      type: 'integer',
+      required: true
+    },
+
     children: {
       collection: 'agenda',
       via: 'parent'

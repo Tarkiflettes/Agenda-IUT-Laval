@@ -7,15 +7,23 @@
   <md-sidemenu-group>
     <md-sidemenu-button ng-click="changeMenu(0)" ng-show="grade">Liste départements</md-sidemenu-button>
   </md-sidemenu-group>
+  
   <md-sidemenu-group ng-show="grade" ng-repeat="gd in sidenav.grade">
+    
     <md-subheader ng-if="gd.type == 1" class="md-no-sticky">
       {{ gd.name }}
     </md-subheader>
+    
     <md-sidemenu-content ng-if="gd.type == 2" md-heading="{{gd.name}}" md-arrow="true" ng-click="displayCla(gd.identifier)">
     <md-sidemenu-button ng-repeat="cl in gd.children" ui-sref="root.agenda({id: cl.identifier})" ng-click="displayCla(gd.identifier)" ng-hide="!cla[{{ gd.identifier }}]">
         {{ cl.name}}
       </md-sidemenu-button>
     </md-sidemenu-content>
+    
+    <md-sidemenu-button ng-if="gd.type == 3" ui-sref="root.agenda({id: gd.identifier})">
+      {{ gd.name }}
+    </md-sidemenu-button>
+
   </md-sidemenu-group>
 
 </md-sidemenu>
