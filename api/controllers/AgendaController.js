@@ -43,9 +43,11 @@ module.exports = {
 
             var end = sails.moment(ev.end);
             end = end.tz('Europe/Paris').format();
-
-            var description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
-
+            
+            var description = "";
+            if (typeof ev.description !== "undefine")
+              description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
+            
             eventJ = {
               title: ev.summary+'\n'+ev.location+'\n'+description,
               location: ev.location,
