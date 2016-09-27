@@ -1,14 +1,17 @@
 <md-sidemenu>
 
-  <md-sidemenu-group ng-repeat="dp in sidenav.department" ng-show="dep">
+  <md-sidemenu-group ng-repeat="dp in sidenav.department | filter:{type: 0}" ng-show="dep">
     <md-sidemenu-button ng-click="changeMenu(dp.identifier)">{{ dp.name }}</md-sidemenu-button>
   </md-sidemenu-group>
 
   <md-sidemenu-group>
-    <md-sidemenu-button ng-click="changeMenu(0)" ng-show="grade">Liste départements</md-sidemenu-button>
+    <md-sidemenu-button ng-click="changeMenu(0)" ng-show="grade">
+      <!-- Liste départeme --> 
+      <ng-md-icon icon="arrow_back"></ng-md-icon>
+    </md-sidemenu-button>
   </md-sidemenu-group>
   
-  <md-sidemenu-group ng-show="grade" ng-repeat="gd in sidenav.grade | filter:{type: 1}">
+  <md-sidemenu-group ng-show="grade" ng-repeat="gd in sidenav.department | filter:{type: 1} | filter:{parent: {identifier: sidenav.currentId}}">
     
     <md-subheader ng-if="gd.type == 1" class="md-no-sticky">
       {{ gd.name }}
