@@ -11,20 +11,20 @@
     </md-sidemenu-button>
   </md-sidemenu-group>
   
-  <md-sidemenu-group ng-show="grade" ng-repeat="gd in sidenav.department | filter:{type: 1} | filter:{parent: {identifier: sidenav.currentId}}">
+  <md-sidemenu-group ng-show="grade" ng-repeat="gd in sidenav.department | filter:{type: 1} | filter:{parent: {identifier: currentId}}">
     
     <md-subheader ng-if="gd.type == 1" class="md-no-sticky">
       {{ gd.name }}
     </md-subheader>
 
-      <md-sidemenu-button ng-repeat-start="cl in sidenav.grade | filter: {parent: {identifier: gd.identifier}}" ng-if="cl.type == 3" ui-sref="root.agenda({id: cl.identifier})">
-        {{ cl.name }}
+    <md-sidemenu-button ng-repeat-start="cl in sidenav.department | filter: {level: 2} | filter: {parent: {identifier: gd.identifier}}" ng-if="cl.type == 3" ui-sref="root.agenda({id: cl.identifier})">
+      {{ cl.name }}
+    </md-sidemenu-button>
+    <md-sidemenu-content ng-if="cl.type == 2" md-heading="{{cl.name}}" md-arrow="true" ng-click="displayCla(cl.identifier)" ng-repeat-end>
+      <md-sidemenu-button ng-repeat="fo in cl.children" ui-sref="root.agenda({id: fo.identifier})" ng-click="displayCla(cl.identifier)" ng-hide="!cla[{{ cl.identifier }}]">
+        {{ fo.name }}
       </md-sidemenu-button>
-      <md-sidemenu-content ng-if="cl.type == 2" md-heading="{{cl.name}}" md-arrow="true" ng-click="displayCla(cl.identifier)" ng-repeat-end>
-        <md-sidemenu-button ng-repeat="fo in cl.children" ui-sref="root.agenda({id: fo.identifier})" ng-click="displayCla(cl.identifier)" ng-hide="!cla[{{ cl.identifier }}]">
-          {{ fo.name }}
-        </md-sidemenu-button>
-      </md-sidemenu-content>
+    </md-sidemenu-content>
   
   </md-sidemenu-group>
 

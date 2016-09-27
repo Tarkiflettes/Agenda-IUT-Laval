@@ -33,6 +33,7 @@ var SidenavController = agendaIUTLaval.controller("SidenavController", function(
     $scope.dep = !$scope.dep;
     $scope.grade = !$scope.grade;
     $scope.currentId = id;
+    /*
     if($scope.grade) {
       $http.get("/api/agenda", {params: {"level": 2, "department": id, "limit": 1000}})
         .success(function(data){
@@ -41,6 +42,7 @@ var SidenavController = agendaIUTLaval.controller("SidenavController", function(
 
         });
     }
+    */
   }
 
 });
