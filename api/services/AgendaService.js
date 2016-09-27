@@ -9,7 +9,7 @@ module.exports = {
 
     var database = 
     [      
-      { name: 'INFO', identifier: 1, parent: 0, type: 0, department: 1, level: 1 },
+      { name: 'INFO : Informatique', identifier: 1, parent: 0, type: 0, department: 1, level: 1 },
         { name: 'Etudiants', identifier: 11, parent: 1, type: 1, department: 1, level: 2 },
           { name: 'DUT Info1', identifier: 674, parent: 11, type: 2, department: 1, level: 2 },
             { name: 'Grp 11A', identifier: 2660, parent: 674, type: 3, department: 1, level: 3 },
@@ -91,14 +91,14 @@ module.exports = {
             { name: 'Hyrule-TP2', identifier: 1038, parent: 531, type: 3, department: 1, level: 3 },
             { name: 'Tamriel-TP1', identifier: 839, parent: 531, type: 3, department: 1, level: 3 },
       
-      { name: 'GB', identifier: 2, parent: 0, type: 0, department: 2, level: 1 },
+      { name: 'GB : Génie Biologique', identifier: 2, parent: 0, type: 0, department: 2, level: 1 },
         { name: 'Etudiants', identifier: 21, parent: 2, type: 1, department: 2, level: 2 },
         { name: 'Enseignants', identifier: 22, parent: 2, type: 1, department: 2, level: 2 },
           { name: 'Titulaires', identifier: 221, parent: 22, type: 2, department: 2, level: 2 },
           { name: 'Vacataires', identifier: 222, parent: 22, type: 2, department: 2, level: 2 },
         { name: 'Salles', identifier: 23, parent: 2, type: 1, department: 2, level: 2 },
       
-      { name: 'MMI', identifier: 3, parent: 0, type: 0, department: 3, level: 1 },
+      { name: 'MMI : Métiers du multimédia et de l\'Internet', identifier: 3, parent: 0, type: 0, department: 3, level: 1 },
         { name: 'Etudiants', identifier: 31, parent: 3, type: 1, department: 3, level: 2 },
           { name: 'DUT MMI1', identifier: 677, parent: 31, type: 2, department: 3, level: 2 },      
             { name: '11A', identifier: 2700, parent: 2672, type: 3, department: 3, level: 3 },
@@ -197,7 +197,7 @@ module.exports = {
             { name: 'TD4-MMI', identifier: 2528, parent: 2525, type: 3, department: 3, level: 3 },
           { name: 'TANGO-MMI', identifier: 2523, parent: 33, type: 3, department: 3, level: 2 },
       
-      { name: 'TC', identifier: 4, parent: 0, type: 0, department: 4, level: 1 },
+      { name: 'TC : Techniques de commercialisation', identifier: 4, parent: 0, type: 0, department: 4, level: 1 },
         { name: 'Etudiants', identifier: 41, parent: 4, type: 1, department: 4, level: 2 },
         { name: 'Enseignants', identifier: 42, parent: 4, type: 1, department: 4, level: 2 },
           { name: 'Titulaires', identifier: 421, parent: 42, type: 2, department: 4, level: 2 },
