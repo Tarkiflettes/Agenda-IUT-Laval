@@ -23,8 +23,6 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
       height: $(window).height()
         -document.getElementById('header').offsetHeight
         -document.getElementById('control').offsetHeight,
-      //contentHeight: "auto",
-      //aspectRatio: 2,
       editable: false,
       lang: 'fr',
       allDaySlot: false,
@@ -52,17 +50,25 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   };
 
   $scope.next = function() { 
-    console.log(uiCalendarConfig.calendars.myCalendar);
+    //console.log(uiCalendarConfig.calendars.myCalendar);
     uiCalendarConfig.calendars.myCalendar.fullCalendar('next');
+    var viewName = uiCalendarConfig.calendars.myCalendar.fullCalendar('getView').name;
+    var date = uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').format();
+    $state.go('root.agenda', {date: date}, {notify: false});
+    //console.log(uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').startOf('week'));
+    //console.log(uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').endOf('week'));
   }
 
   $scope.prev = function() {
+    var viewName = uiCalendarConfig.calendars.myCalendar.fullCalendar('getView').name;
+    var date = uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').format();
+    $state.go('root.agenda', {date: date}, {notify: false});
     uiCalendarConfig.calendars.myCalendar.fullCalendar('prev');
   }
 
   $scope.changeView = function(viewName) {
-    $state.go('root.agenda', {id: 3113, view: viewName});
-    uiCalendarConfig.calendars.myCalendar.fullCalendar('changeView', viewName); 
+    $state.go('root.agenda', {view: viewName});
+    //uiCalendarConfig.calendars.myCalendar.fullCalendar('changeView', viewName); 
   }
 
   $scope.today = function() {
