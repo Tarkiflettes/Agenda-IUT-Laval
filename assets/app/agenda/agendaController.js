@@ -1,4 +1,4 @@
-var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig, $rootScope, $state) {
+var AgendaController = agendaIUTLaval.controller("AgendaController", function($scope, $stateParams, $timeout, uiCalendarConfig, $rootScope, $state, $location) {
 
   var vm = this;
  
@@ -18,6 +18,12 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
     defaultView = $stateParams.view; 
   }
 
+  var defaultDate = moment().valueOf();
+
+  if (typeof $stateParams.date !== "undefined") {
+    defaultDate = $stateParams.date;
+  }
+
   $scope.uiConfig = {
     calendar:{
       height: $(window).height()
@@ -27,6 +33,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
       lang: 'fr',
       allDaySlot: false,
       defaultView: defaultView,
+      defaultDate: defaultDate,
       header: false,
       weekends: false,
       scrollTime:  "08:00:00",
@@ -50,25 +57,21 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   };
 
   $scope.next = function() { 
-    //console.log(uiCalendarConfig.calendars.myCalendar);
     uiCalendarConfig.calendars.myCalendar.fullCalendar('next');
     var viewName = uiCalendarConfig.calendars.myCalendar.fullCalendar('getView').name;
     var date = uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').format();
     $state.go('root.agenda', {date: date}, {notify: false});
-    //console.log(uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').startOf('week'));
-    //console.log(uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').endOf('week'));
   }
 
   $scope.prev = function() {
+    uiCalendarConfig.calendars.myCalendar.fullCalendar('prev');
     var viewName = uiCalendarConfig.calendars.myCalendar.fullCalendar('getView').name;
     var date = uiCalendarConfig.calendars.myCalendar.fullCalendar('getDate').format();
     $state.go('root.agenda', {date: date}, {notify: false});
-    uiCalendarConfig.calendars.myCalendar.fullCalendar('prev');
   }
 
   $scope.changeView = function(viewName) {
     $state.go('root.agenda', {view: viewName});
-    //uiCalendarConfig.calendars.myCalendar.fullCalendar('changeView', viewName); 
   }
 
   $scope.today = function() {

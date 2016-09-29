@@ -15,4 +15,8 @@ var CourseController = agendaIUTLaval.controller("CourseController", function($s
     $rootScope.subTitle = vm.course.title;
   });
 
+  vm.goBack = function() {
+    alert("koukou");
+    window.history.back();
+  }
 })
