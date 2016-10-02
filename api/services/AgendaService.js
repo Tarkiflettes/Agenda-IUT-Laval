@@ -5,6 +5,7 @@ module.exports = {
   updateDatabase: function() {
 
     Agenda.destroy().exec(function(err) {
+      if (err) { console.log(err); }
     });
 
     var database = 
@@ -207,6 +208,7 @@ module.exports = {
      
     Agenda.create(database).exec(function (err, records) {
       if (err) { console.log(err); }
+      return records;
     });
     
   },

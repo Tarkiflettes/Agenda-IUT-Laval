@@ -18,7 +18,8 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'someMongodbServer'
+    connection: 'someMongodbServer',
+    //connection: 'sqlserver',
   },
 
   /***************************************************************************
@@ -35,6 +36,6 @@ module.exports = {
     level: "debug"
   },
 
-  hookTimeout: 300000
+  hookTimeout: 150000
 
 };
