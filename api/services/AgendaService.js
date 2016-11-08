@@ -245,6 +245,8 @@ module.exports = {
     var idColor = (AgendaService.textToBinary(text).split("1").length - 1)+text.length;
     if (idColor<50)
       idColor = 50
+    if(text.indexOf('Exam') !== -1)
+      return '#FF0000';
     return colors[(idColor%50)];
   },
 
