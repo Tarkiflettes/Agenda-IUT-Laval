@@ -28,43 +28,43 @@ module.exports = {
 
       sails.ical.fromURL(url, {}, function(err, data) {
 
-        var i = 0;
+        if (err) {
+          res.badRequest("erreur");
+        } else {
+          var i = 0;
 
-        AgendaService.eventColor("lapin");
+          for (var k in data){
+            if (data.hasOwnProperty(k)) {
+              var ev = data[k];
 
-        for (var k in data){
-          if (data.hasOwnProperty(k)) {
-            var ev = data[k];
+              //console.log(ev);
 
-            //console.log(ev);
+              var start = sails.moment(ev.start);
+              start = start.tz('Europe/Paris').format();
 
-            var start = sails.moment(ev.start);
-            start = start.tz('Europe/Paris').format();
+              var end = sails.moment(ev.end);
+              end = end.tz('Europe/Paris').format();
 
-            var end = sails.moment(ev.end);
-            end = end.tz('Europe/Paris').format();
-            
-            var description = "";
-            if (typeof ev.description !== "undefine")
-              description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
-            
-            eventJ = {
-              title: ev.summary+'\n'+ev.location+'\n'+description,
-              location: ev.location,
-              start: start,
-              end: end,
-              //color: '#2980b9',
-              color: AgendaService.eventColor(ev.summary),
-              //textColor: "#000000",
-              url: '/'+id+"/"+i
-            };
+              var description = "";
+              if (typeof ev.description !== "undefine")
+                description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
 
-            output.push(eventJ);
+              eventJ = {
+                title: ev.summary+'\n'+ev.location+''+description,
+                location: ev.location,
+                start: start,
+                end: end,
+                color: AgendaService.eventColor(ev.summary),
+                url: '/'+id+"/"+i
+              };
 
-            i++;
+              output.push(eventJ);
+
+              i++;
+            }
           }
+          res.json(output);
         }
-        res.json(output);
       });
     }
   },
@@ -89,7 +89,7 @@ module.exports = {
         AgendaService.eventColor("lapin");
 
         var ev = data[Object.keys(data)[idCours]];
-        
+
         if (typeof ev == 'undefined') {
           res.badRequest("id cours n'existe pas");
         } else {
@@ -108,7 +108,7 @@ module.exports = {
             start: start,
             end: end,
           };
-      
+
           res.json(output);
         }
       });

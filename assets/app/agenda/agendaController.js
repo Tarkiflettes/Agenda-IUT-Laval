@@ -21,7 +21,8 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
   var defaultDate = moment().valueOf();
 
   if (typeof $stateParams.date !== "undefined") {
-    defaultDate = $stateParams.date;
+    if ($stateParams.date != 'current')
+      defaultDate = $stateParams.date;
   }
 
   $scope.uiConfig = {
@@ -76,6 +77,7 @@ var AgendaController = agendaIUTLaval.controller("AgendaController", function($s
 
   $scope.today = function() {
     uiCalendarConfig.calendars.myCalendar.fullCalendar('today');
+    $state.go('root.agenda', {date: 'current'}, {notify: false});
   }
 
 })

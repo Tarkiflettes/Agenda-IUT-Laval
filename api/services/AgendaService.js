@@ -215,6 +215,9 @@ module.exports = {
   
   eventColor: function(text) {
 
+    if (text.toLowerCase().indexOf("exam") !== -1)
+      return "#ff0000";
+
     var colors = [
       "#EF5350", "#F44336",
       "#B71C1C", "#F06292",
