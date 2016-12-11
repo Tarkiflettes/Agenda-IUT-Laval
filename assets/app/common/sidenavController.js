@@ -11,9 +11,9 @@ var SidenavController = agendaIUTLaval.controller("SidenavController", function(
   $scope.currentId = 1;
 
   $http.get("/api/agenda/", {params: {"limit": 1000}})    
-    .success(function(data){
+    .then(function(response){
 
-      vm.department = data;
+      vm.department = response.data;
 
     });
 

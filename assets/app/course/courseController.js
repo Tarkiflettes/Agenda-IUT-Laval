@@ -9,8 +9,8 @@ var CourseController = agendaIUTLaval.controller("CourseController", function($s
   vm.id = $stateParams.id;
 
   $http.get("/api/agenda/course/", {params:{"id": $stateParams.id, "idcours": $stateParams.course}})
-    .success(function(data){
-    vm.course = data;
+    .then(function(response){
+    vm.course = response.data;
     $rootScope.title = vm.course.title+"- Agenda - IUT Laval";
     $rootScope.subTitle = vm.course.title;
   });
