@@ -1,43 +1,30 @@
 # Agenda-IUT-Laval
 
-## Librairie utilisées
-###### Front
-- angular
-- angular-ui-router
-- angular-material
-- angular-ui-calendar
-- font-awesome
-- angular-material-icons
-- angular-material-sidemenu
+Website allowing students of [University Le Mans](http://www.univ-lemans.fr/fr/index.html) (IUT-Laval) to access the agenda of their courses through an simple and responsive interface.
 
-###### Back
-- sails
-- ical
-- moment
-- moment-timezone
+This website has been developed with [Sails](https://github.com/balderdashy/sails) and [AngularJS](https://github.com/angular/angular.js)
 
-## Liste de tâches
-###### A faire
-- Page d'accueil
-- Sidenav à ameliorer
-- Barre de recherche
-- Swipe sidenav
-- Swipe agenda
-- url agenda date
-- bdd menu
+## Get started
 
-###### Accomplies
-- Header
-- Sidenav (avec menu des agendas)
-- API des events
-- API des agendas
-- integration angular-ui-calendar
-- Styling de angular-ui-calendar (height)
-- Styling des boutons de angular-ui-calendar
-- Couleurs des events
-- url eganda view
-- Page des events
+```
+npm install
+npm start
+```
 
-## Model :
-![alt tag](http://i.imgur.com/okLfnLp.png)
+## Screenshot
+  
+![Agenda-IUT-Laval](https://i.imgur.com/xgjaTOd.png)
+![Agenda-IUT-Laval](https://i.imgur.com/tolKOEz.png)
+![Agenda-IUT-Laval](https://i.imgur.com/U8j2ErM.png)
+![Agenda-IUT-Laval](https://i.imgur.com/Bqexkn0.png)
+![Agenda-IUT-Laval](https://i.imgur.com/CuZq9rG.png)
 
+## Authors
+
+* **Lionel Jouin** - [LionelJouin](https://github.com/LionelJouin)  
+
+See also the list of [contributors](https://github.com/Tarkiflettes/Agenda-IUT-Laval/graphs/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

@@ -22,7 +22,7 @@ module.exports = {
     if (typeof id == 'undefined') {
       res.badRequest("id non defini");
     } else {
-      var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=2&calType=ical&nbWeeks=4';
+      var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=1&calType=ical&nbWeeks=4';
 
       var output = [];
 
@@ -38,7 +38,7 @@ module.exports = {
               var ev = data[k];
 
               //console.log(ev);
-
+              
               var start = sails.moment(ev.start);
               start = start.tz('Europe/Paris').format();
 
@@ -46,7 +46,7 @@ module.exports = {
               end = end.tz('Europe/Paris').format();
 
               var description = "";
-              if (typeof ev.description !== "undefine")
+              if (typeof ev.description !== "undefined")
                 description = ev.description.replace(/(\(Exported :(?:.*)\))/g, "");
 
               eventJ = {
@@ -80,7 +80,7 @@ module.exports = {
     } else if (typeof idCours == 'undefined') {
       res.badRequest("id cours non defini");
     } else {
-      var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=2&calType=ical&nbWeeks=4';
+      var url = 'http://edt.univ-lemans.fr/jsp/custom/modules/plannings/anonymous_cal.jsp?resources='+id+'&projectId=1&calType=ical&nbWeeks=4';
 
       var output = [];
 

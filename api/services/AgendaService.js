@@ -215,6 +215,9 @@ module.exports = {
   
   eventColor: function(text) {
 
+    if (typeof text === "undefined")
+      return "#ff0000";
+
     if (text.toLowerCase().indexOf("exam") !== -1)
       return "#ff0000";
 
